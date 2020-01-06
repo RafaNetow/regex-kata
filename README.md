@@ -56,7 +56,7 @@ Hay que dejar algo claro las regex tienen sus ventajas y desventajas, pero defin
 
 ## Ejemplos
 
-Para testear cada uno de los patrones puedes entrar a la página:
+Para testear cada uno de los patrones puedes entrar a la página: <https://regex101.com/>
 
     Comprobando si  es un username
 
