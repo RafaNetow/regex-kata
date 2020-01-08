@@ -33,6 +33,8 @@ Soportados por lenguajes muy mainstream como JavaScript, C++, Pyhton, C# entre o
 
 Las expresiones regulares tienen un beneficio de tener soporte de los estándares internaciones de software como ECMASCRIPT
 
+---
+
 ## Tabla de símbolos
 
 Hay un estándar de los símbolos que se utilizan para las expresiones regulares.
@@ -40,6 +42,8 @@ Hay un estándar de los símbolos que se utilizan para las expresiones regulares
 ![tabla de símbolos](tableregex.png)
 
 Hay que dejar algo claro las regex tienen sus ventajas y desventajas, pero definitivamente si aprendes a utilizar y entiendes su poder puede salvarte de muchas cosas, por ese motivo mencionare algunas ventajas y desventajas que he sentido en ellas.
+
+---
 
 ## Ventajas
 
@@ -54,6 +58,8 @@ Hay que dejar algo claro las regex tienen sus ventajas y desventajas, pero defin
     - Cuesta entender expresiones regulares, sobre todo al principio.
     - Dificil de debugear
 
+---
+
 ## Ejemplos
 
 Para testear cada uno de los patrones puedes entrar a la página:
@@ -64,17 +70,17 @@ Comprobando si es un username
 
 Patrón: `^[a-z0-9_-]{3,16}$/`
 
-> ## Descripción
->
-> Estamos diciendo que aceptamos letras minúsculas (a-z), números del 0 a 9,un guion bajo o guion. Seguido de esto indicamos con {3,16} que al menos sean escritos 3 caracteres y no más de 16.
->
-> ## String que funcionaria
->
-> `my-us3r_n4m3`
->
-> ## String que no funcionaria
->
-> `th1s1s-wayt00_l0ngt0beausername`
+## Descripción
+
+Estamos diciendo que aceptamos letras minúsculas (a-z), números del 0 a 9,un guion bajo o guion. Seguido de esto indicamos con {3,16} que al menos sean escritos 3 caracteres y no más de 16.
+
+### String que funcionaria
+
+`my-us3r_n4m3`
+
+### String que no funcionaria
+
+`th1s1s-wayt00_l0ngt0beausername`
 
 Comprobando si es un hexadecimal
 
@@ -82,32 +88,35 @@ Comprobando si es un hexadecimal
 
 Patrón: `^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-> ## Descripción
->
-> Primero le decimos que # puede ser opcional utilizando el ? , seguido de esto aceptamos letras de (a-f) y números de (0-9) al menos {3} o (|) {6} caracteres
->
-> ## String que funcionaria
->
-> `#a3c113`
->
-> ## String que no funcionaria
->
-> `#4d82h4` (contains the letter h)
+## Descripción
 
-Comprobando Emails
+Primero le decimos que # puede ser opcional utilizando el ? , seguido de esto aceptamos letras de (a-f) y números de (0-9) al menos {3} o (|) {6} caracteres
+
+### String que funcionaria
+
+`#a3c113`
+
+### String que no funcionaria
+
+`#4d82h4` (contains the letter h)
+
+### Comprobando Emails
 
 ---
 
-> Patron:`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
->
-> Dentro del primero grupo hacemos match con 1 o más letras en minúscula, guion bajo, puntos y guiones. Un "escaped dot" (./) significa que podría venir cualquier caracter. Directamente después de eso esperamos un '@' seguido esperaríamos el nombre del domain en cual podría contener al menos una letra, numero o undescore ( no tiene un límite), esperando luego un .Yy por último la extensión que puede ser de {2} a {6}.
->
-> ## String que funcionaria
->
-> `john@doe.com`
-> String que no funcionaria
->
-> `4d82h4` (contains the letter h)
+Patron:`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+
+Dentro del primero grupo hacemos match con 1 o más letras en minúscula, guion bajo, puntos y guiones. Un "escaped dot" (./) significa que podría venir cualquier caracter. Directamente después de eso esperamos un '@' seguido esperaríamos el nombre del domain en cual podría contener al menos una letra, numero o undescore ( no tiene un límite), esperando luego un .Yy por último la extensión que puede ser de {2} a {6}.
+
+### String que funcionaria
+
+`john@doe.com`
+
+### String que no funcionaria
+
+`4d82h4` (contains the letter h)
+
+---
 
 ## Herramientas que podrían hacer útiles
 
